@@ -76,10 +76,14 @@ namespace PROG2070Assign1
                     {
                         return false;
                     }
-                    else
+                    else if (radius.Length < 10)
                     {
                         Console.WriteLine("Number must be greater than 0");
                     }
+            }
+            catch(OverflowException ex)
+            {
+                Console.WriteLine("Number cannot be greater than 2,147,483,647");
             }
             catch (Exception ex)
             {
